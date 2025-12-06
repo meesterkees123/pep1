@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Meester Kees - Tafels Oefenen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="meester-willem">
+                <img src="meester-kees.jpg" alt="Meester Kees" class="meester-willem-img">
+            </div>
+            <h1>Meester Kees</h1>
+            <p class="subtitle">Tafels Oefenen</p>
+        </header>
+
+        <div id="start-screen" class="screen active">
+            <div class="welcome-message">
+                <h2>Welkom bij Meester Kees!</h2>
+                <p>Oefen je tafels met Meester Kees. Je hebt 5 seconden per vraag!</p>
+            </div>
+            <button id="start-btn" class="btn btn-primary">Start Spel</button>
+        </div>
+
+        <div id="game-screen" class="screen">
+            <div class="game-header">
+                <div class="score">Score: <span id="score">0</span></div>
+                <div class="timer-container">
+                    <div class="timer-bar">
+                        <div id="timer-fill" class="timer-fill"></div>
+                    </div>
+                    <div class="timer-text"><span id="timer">5</span>s</div>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <div class="question">
+                    <span id="question-text">3 × 4 = ?</span>
+                </div>
+            </div>
+
+            <div class="answers">
+                <button class="answer-btn" data-answer="0">12</button>
+                <button class="answer-btn" data-answer="1">15</button>
+                <button class="answer-btn" data-answer="2">18</button>
+                <button class="answer-btn" data-answer="3">21</button>
+            </div>
+
+            <div id="feedback" class="feedback"></div>
+        </div>
+
+        <div id="end-screen" class="screen">
+            <div class="end-content">
+                <h2>Geweldig gedaan!</h2>
+                <div class="final-score">
+                    <p>Je eindscore:</p>
+                    <div class="score-display" id="final-score">0</div>
+                </div>
+                <div class="stats">
+                    <p>Goed beantwoord: <span id="correct-count">0</span></p>
+                    <p>Totaal vragen: <span id="total-count">0</span></p>
+                </div>
+                <button id="restart-btn" class="btn btn-primary">Opnieuw Spelen</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
